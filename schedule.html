@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Meeting | MeetSync</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+        <div class="brand">Meet<span>Sync</span></div>
+        <p class="sidebar-label">MAIN MENU</p>
+
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="schedule.html" class="active">Schedule Meeting</a>
+            <a href="meetings.html">My Meetings</a>
+            <a href="join.html">Join Meeting</a>
+            <a href="notifications.html">Notifications</a>
+            <a href="reports.html">Reports</a>
+            <a href="register.html" id="adminNav">Register User</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="index.html" id="logoutLink">Logout</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <h2>Schedule Meeting</h2>
+            <div class="user-info">
+                <span id="userName">User</span>
+                <span id="userAvatar" class="user-avatar"></span>
+            </div>
+        </header>
+
+        <section class="dashboard-content">
+
+            <div class="page-heading">
+                <div>
+                    <h2>Create a Meeting</h2>
+                    <p>Enter the details below to schedule a new meeting.</p>
+                </div>
+            </div>
+
+            <div class="form-card">
+
+                <form id="scheduleForm">
+
+                    <div class="form-group">
+                        <label for="title">Meeting Title</label>
+                        <input
+                            type="text"
+                            id="title"
+                            placeholder="Enter meeting title"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea
+                            id="description"
+                            rows="4"
+                            placeholder="Enter meeting description"
+                        ></textarea>
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="date">Meeting Date</label>
+                            <input type="date" id="date" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="startTime">Start Time</label>
+                            <input type="time" id="startTime" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="endTime">End Time</label>
+                            <input type="time" id="endTime" required>
+                        </div>
+
+                    </div>
+
+                    <p id="scheduleMessage" class="message"></p>
+
+                    <button type="submit" class="btn btn-primary">
+                        Schedule Meeting
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="app.js"></script>
+<script src="schedule.js"></script>
+
+</body>
+</html>

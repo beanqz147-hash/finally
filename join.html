@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Meeting | MeetSync</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+        <div class="brand">Meet<span>Sync</span></div>
+        <p class="sidebar-label">MAIN MENU</p>
+
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="schedule.html">Schedule Meeting</a>
+            <a href="meetings.html">My Meetings</a>
+            <a href="join.html" class="active">Join Meeting</a>
+            <a href="notifications.html">Notifications</a>
+            <a href="reports.html">Reports</a>
+            <a href="register.html" id="adminNav">Register User</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="index.html" id="logoutLink">Logout</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <h2>Meeting Room</h2>
+
+            <div class="user-info">
+                <span id="userName">User</span>
+                <span id="userAvatar" class="user-avatar"></span>
+            </div>
+        </header>
+
+        <section class="dashboard-content">
+
+            <div class="page-heading">
+                <div>
+                    <h2>Join Meeting</h2>
+                    <p>Enter your meeting room and manage your camera and microphone.</p>
+                </div>
+            </div>
+
+            <div class="meeting-room">
+
+                <div class="meeting-room-header">
+                    <h3>Meeting Room</h3>
+
+                    <div class="meeting-code">
+                        Meeting ID:
+                        <strong id="meetingCode">Loading...</strong>
+                    </div>
+                </div>
+
+                <div class="video-container">
+
+                    <video
+                        id="localVideo"
+                        autoplay
+                        playsinline
+                        muted
+                    ></video>
+
+                    <div id="cameraPlaceholder" class="camera-placeholder">
+                        <p>Camera preview is currently unavailable.</p>
+                    </div>
+
+                </div>
+
+                <div class="meeting-controls">
+
+                    <button
+                        type="button"
+                        id="microphoneButton"
+                        class="btn btn-secondary"
+                    >
+                        🎤 Mute Microphone
+                    </button>
+
+                    <button
+                        type="button"
+                        id="cameraButton"
+                        class="btn btn-secondary"
+                    >
+                        📷 Turn Camera Off
+                    </button>
+
+                    <button
+                        type="button"
+                        id="copyButton"
+                        class="btn btn-primary"
+                    >
+                        Copy Meeting Link
+                    </button>
+
+                    <button
+                        type="button"
+                        id="leaveButton"
+                        class="btn btn-danger"
+                    >
+                        Leave Meeting
+                    </button>
+
+                </div>
+
+                <p id="roomMessage" class="message"></p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="app.js"></script>
+<script src="join.js"></script>
+
+</body>
+</html>
